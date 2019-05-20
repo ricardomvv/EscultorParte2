@@ -1,7 +1,7 @@
 #include "putsphere.h"
 #include <math.h>
 
-putSphere::putSphere(int _xc, int _yc, int _zc, int _radius, int _r,int _g, int _b,int _a)
+putSphere::putSphere(int _xc, int _yc, int _zc, int _radius, float _r, float _g, float _b,float _a)
 {
     xcenter = _xc;
     ycenter = _yc;

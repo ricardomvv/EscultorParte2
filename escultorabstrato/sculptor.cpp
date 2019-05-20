@@ -277,7 +277,7 @@ sculptor::sculptor(int _nx, int _ny, int _nz)
                    fout <<"4 "<<0+Nvar*8<<" "<<1+Nvar*8<<" "<<5+Nvar*8<<" "<<4+Nvar*8<<" "<<matriz3D[i][j][k].r<<" "<<matriz3D[i][j][k].g<<" "<<matriz3D[i][j][k].b<<" "<<matriz3D[i][j][k].a<<endl;
                    fout <<"4 "<<0+Nvar*8<<" "<<4+Nvar*8<<" "<<7+Nvar*8<<" "<<3+Nvar*8<<" "<<matriz3D[i][j][k].r<<" "<<matriz3D[i][j][k].g<<" "<<matriz3D[i][j][k].b<<" "<<matriz3D[i][j][k].a<<endl;
                    fout <<"4 "<<3+Nvar*8<<" "<<7+Nvar*8<<" "<<6+Nvar*8<<" "<<2+Nvar*8<<" "<<matriz3D[i][j][k].r<<" "<<matriz3D[i][j][k].g<<" "<<matriz3D[i][j][k].b<<" "<<matriz3D[i][j][k].a<<endl;
-                   fout<<"4 "<<1+Nvar*8<<" "<<2+Nvar*8<<" "<<6+Nvar*8<<" "<<5+Nvar*8<<" "<<matriz3D[i][j][k].r<<" "<<matriz3D[i][j][k].g<<" "<<matriz3D[i][j][k].b<<" "<<matriz3D[i][j][k].a<<endl;
+                   fout<<" 4 "<<1+Nvar*8<<" "<<2+Nvar*8<<" "<<6+Nvar*8<<" "<<5+Nvar*8<<" "<<matriz3D[i][j][k].r<<" "<<matriz3D[i][j][k].g<<" "<<matriz3D[i][j][k].b<<" "<<matriz3D[i][j][k].a<<endl;
                    Nvar++;
 
                }

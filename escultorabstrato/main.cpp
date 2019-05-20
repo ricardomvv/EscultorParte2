@@ -25,140 +25,112 @@ using namespace std;
 
 int main()
 {
-        sculptor *s;
+    ifstream fin;
+        string s;
+        stringstream ss;
+        sculptor *c;
 
-        std::ifstream fin("C:/Users/Ricardo Varela/Documents/escultorabstrato/steste.txt");
+        int nx = 0;
+        int ny = 0;
+        int nz = 0;
+        float r,g,b,a;
 
-        (fin.is_open());{
-            string linha;
-            while (getline(fin, linha)) {
-
-                if (linha.find("dim") != std::string::npos) {
+        vector<FiguraGeometrica*> fig;
+        unsigned int n = 0;
 
 
-                    std::istringstream linhaEmStream(linha);
+            fin.open("steste.txt");
 
-                    int x, y, z;
-                    linhaEmStream >> x >> y >> z;
-                    cout << "Dimensões: " << x << " " << y << " " << z << endl;
+            if(!fin.is_open()){
 
-                    s = new sculptor(x, y, z);
+                exit(0);
+
+              }
+            cout<<"Arquivo aberto com sucesso!"<<endl;
+
+            getline(fin, s);
+
+            ss.str(s);
+
+            ss >> s;
+            ss >> nx >> ny >> nz;
+
+            c = new sculptor(nx,ny,nz);
+
+            ss.clear();
+
+            while(fin.good()){
+                getline(fin, s);
+                ss.str(s);
+                ss >> s;
+
+                if(s.compare("putvoxel") == 0){
+                    int x,y,z;
+                    ss >> x >> y >> z >> r >> g >> b >> a;
+                    fig.push_back(new putVoxel(x,y,z,r,g,b,a));
+                    fig[n]->draw(*c);
+                    n++;
+                }
+                if(s.compare("cutvoxel") == 0){
+                    int x,y,z;
+                    ss >> x >> y >> z;
+                    fig.push_back(new cutVoxel(x,y,z));
+                    fig[n]->draw(*c);
+                    n++;
                 }
 
-                if (linha.find("putbox") != std::string::npos) {
-
-
-                    std::istringstream StreamLinha(linha);
-
-                    cout << "Putbox" << endl;
-                    int x0, x1, y0, y1, z0, z1, r, g, b;
-                    float a;
-
-                    StreamLinha >> x0 >> x1 >> y0 >> y1 >> z0 >> z1 >> r >> g >> b >> a;
-                    putBox pb(x0,x1,y0,y1,z0,z1, r, g, b, a);
-                    pb.draw(*s);
+                if(s.compare("putbox") == 0){
+                    int x0,x1,y0,y1,z0,z1;
+                    ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1 >> r >> g >> b >> a;
+                    fig.push_back(new putBox(x0,x1,y0,y1,z0,z1,r,g,b,a));
+                    fig[n]->draw(*c);
+                    n++;
+                }
+                if(s.compare("cutbox") == 0){
+                    int x0,x1,y0,y1,z0,z1;
+                    ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1;
+                    fig.push_back(new cutBox(x0,x1,y0,y1,z0,z1));
+                    fig[n]->draw(*c);
+                    n++;
                 }
 
-                if (linha.find("cutbox") != std::string::npos) {
-
-
-                    std::istringstream SLinha(linha);
-
-                    cout << "Cutbox" << endl;
-                    int x0, x1, y0, y1, z0, z1;
-
-                    SLinha >> x0 >> x1 >> y0 >> y1 >> z0 >> z1;
-                    cutBox cb(x0,x1,y0,y1,z0,z1);
-                    cb.draw(*s);
+                if(s.compare("putsphere") == 0){
+                    int xc,yc,zc,raio;
+                    ss >> xc >> yc >> zc >> raio >> r >> g >> b >> a;
+                    fig.push_back(new putSphere(xc,yc,zc,raio,r,g,b,a));
+                    fig[n]->draw(*c);
+                    n++;
+                }
+                if(s.compare("cutsphere") == 0){
+                    int xc,yc,zc,raio;
+                    ss >> xc >> yc >> zc >> raio;
+                    fig.push_back(new cutSphere(xc,yc,zc,raio));
+                    fig[n]->draw(*c);
+                    n++;
                 }
 
-                if (linha.find("putvoxel") != std::string::npos) {
-
-
-                    std::istringstream SLinha(linha);
-
-                    cout << "Putvoxel" << endl;
-                    int x0, y0, z0, r, g, b;
-                    float a;
-
-                    SLinha >> x0 >> y0 >> z0 >> r >> g >> b >> a;
-                    putVoxel pv(x0,y0,z0, r, g, b, a);
-                    pv.draw(*s);
+                if(s.compare("putellipsoid") == 0){
+                    int xc,yc,zc,rx,ry,rz;
+                    ss >> xc >> yc >> zc >> rx >> ry >> rz >> r >> g >> b >> a;
+                    fig.push_back(new putEllipsoid(xc,yc,zc,rx,ry,rz,r,g,b,a));
+                    fig[n]->draw(*c);
+                    n++;
+                }
+                if(s.compare("cutellipsoid") == 0){
+                    int xc,yc,zc,rx,ry,rz;
+                    ss >> xc >> yc >> zc >> rx >> ry >> rz;
+                    fig.push_back(new cutEllipsoid(xc,yc,zc,rx,ry,rz));
+                    fig[n]->draw(*c);
+                    n++;
                 }
 
-                if (linha.find("cutvoxel") != std::string::npos) {
-
-                    std::istringstream SLinha(linha);
-
-                    cout << "Cutvoxel" << endl;
-                    int x0, y0, z0, r, g, b;
-                    float a;
-
-                    SLinha >> x0 >> y0 >> z0 >> r >> g >> b >> a;
-                    putVoxel cv(x0,y0,z0, r, g, b, a);
-                    cv.draw(*s);
-                }
-
-                if (linha.find("cutsphere") != std::string::npos) {
-
-                    std::istringstream SLinha(linha);
-
-                    cout << "Cutsphere" << endl;
-                    int x0, y0, z0, raio;
-
-
-                    SLinha >> x0 >> y0 >> z0 >> raio;
-                    cutSphere cs(x0, y0, z0, raio);
-                    cs.draw(*s);
-                }
-
-                if (linha.find("putsphere") != std::string::npos) {
-
-                    std::istringstream Slinha(linha);
-
-                    cout << "Putsphere" << endl;
-                    int x0, y0, z0, raio, r, g, b;
-                    float a;
-
-                    Slinha >> x0 >> y0 >> z0 >> raio >> r >> g >> b >> a;
-                    putSphere ps(x0, y0, z0, raio, r, g, b, a);
-                    ps.draw(*s);
-                }
-
-                if (linha.find("cutellipsoid") != std::string::npos) {
-
-
-                    std::istringstream linhaEmStream(linha);
-
-                    cout << "Cutellipsoid" << endl;
-                    int x0, y0, z0, rx, ry, rz;
-
-                    linhaEmStream >> x0 >> y0 >> z0 >> rx >> ry >> rz;
-                    cutEllipsoid ce(x0, y0, z0, rx, ry, rz);
-                    ce.draw(*s);
-                }
-
-                if (linha.find("cutellipsoid") != std::string::npos) {
-
-
-                    std::istringstream Slinha(linha);
-
-                    cout << "Cutellipsoid" << endl;
-                    int x0, y0, z0, rx, ry, rz, r, g, b;
-                    float a;
-
-                    Slinha >> x0 >> y0 >> z0 >> rx >> ry >> rz >> r >> g >> b >> a;
-                    putEllipsoid pe(x0, y0, z0, rx, ry, rz, r, g, b, a);
-                    pe.draw(*s);
-                }
-
+                ss.clear();
             }
-            fin.close();
-        }
 
-        s-> writeOFF("C:/Users/Ricardo Varela/Documents/escultorabstrato");
+            c -> writeOFF("testando.off");
 
-        cout << "arquivo foi gerado!" << endl;
+
+        return 0;
 
     }
 

@@ -1,7 +1,7 @@
 #include "putellipsoid.h"
 #include <math.h>
 
-putEllipsoid::putEllipsoid(int _xc, int _yc, int _zc, int radx, int rady, int radz, int _r, int _g, int _b, int _a)
+putEllipsoid::putEllipsoid(int _xc, int _yc, int _zc, int radx, int rady, int radz, float _r, float _g, float _b, float _a)
 {
 
     xcenter = _xc;

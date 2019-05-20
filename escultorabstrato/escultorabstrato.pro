@@ -14,8 +14,7 @@ SOURCES += \
         putellipsoid.cpp \
         putsphere.cpp \
         putvoxel.cpp \
-        sculptor.cpp \
-        voxel.cpp
+        sculptor.cpp
 
 HEADERS += \
     cutbox.h \
