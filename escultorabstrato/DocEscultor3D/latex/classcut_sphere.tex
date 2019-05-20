@@ -1,0 +1,139 @@
+\hypertarget{classcut_sphere}{}\section{Referência da Classe cut\+Sphere}
+\label{classcut_sphere}\index{cutSphere@{cutSphere}}
+
+
+{\ttfamily \#include $<$cutsphere.\+h$>$}
+
+Diagrama de hierarquia para cut\+Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcut_sphere}
+\end{center}
+\end{figure}
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcut_sphere_a5fb115ed9c9fbeed015b247910036d61}{cut\+Sphere}} (int \+\_\+xc, int \+\_\+yc, int \+\_\+zc, int \+\_\+r)
+\item 
+void \mbox{\hyperlink{classcut_sphere_a647eb845a169437c5c336bdcb282b075}{draw}} (\mbox{\hyperlink{classsculptor}{sculptor}} \&t)
+\item 
+\mbox{\hyperlink{classcut_sphere_acc41c446f3ae38d39b18b7b08e34f236}{$\sim$cut\+Sphere}} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcut_sphere_abc9077d50df05196d90450598bccff14}{xcenter}}
+\item 
+int \mbox{\hyperlink{classcut_sphere_add926dd22a432d2e369af86885b06118}{ycenter}}
+\item 
+int \mbox{\hyperlink{classcut_sphere_a6aee9641be3fe4586d21554291260003}{zcenter}}
+\item 
+int \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classcut_sphere_a5fb115ed9c9fbeed015b247910036d61}\label{classcut_sphere_a5fb115ed9c9fbeed015b247910036d61}} 
+\index{cutSphere@{cutSphere}!cutSphere@{cutSphere}}
+\index{cutSphere@{cutSphere}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{cutSphere()}{cutSphere()}}
+{\footnotesize\ttfamily cut\+Sphere\+::cut\+Sphere (\begin{DoxyParamCaption}\item[{int}]{\+\_\+xc,  }\item[{int}]{\+\_\+yc,  }\item[{int}]{\+\_\+zc,  }\item[{int}]{\+\_\+r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \mbox{\hyperlink{classcut_sphere_abc9077d50df05196d90450598bccff14}{xcenter}} = \_xc;}
+\DoxyCodeLine{8     \mbox{\hyperlink{classcut_sphere_add926dd22a432d2e369af86885b06118}{ycenter}} = \_yc;}
+\DoxyCodeLine{9     \mbox{\hyperlink{classcut_sphere_a6aee9641be3fe4586d21554291260003}{zcenter}} = \_zc;}
+\DoxyCodeLine{10     \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}} = \_r;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcut_sphere_acc41c446f3ae38d39b18b7b08e34f236}\label{classcut_sphere_acc41c446f3ae38d39b18b7b08e34f236}} 
+\index{cutSphere@{cutSphere}!````~cutSphere@{$\sim$cutSphere}}
+\index{````~cutSphere@{$\sim$cutSphere}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{$\sim$cutSphere()}{~cutSphere()}}
+{\footnotesize\ttfamily cut\+Sphere\+::$\sim$cut\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{classcut_sphere_a647eb845a169437c5c336bdcb282b075}\label{classcut_sphere_a647eb845a169437c5c336bdcb282b075}} 
+\index{cutSphere@{cutSphere}!draw@{draw}}
+\index{draw@{draw}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void cut\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsculptor}{sculptor}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_ac996dac6561c450beaf5fd643e43e095}{Figura\+Geometrica}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} i,j,k;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordflow}{for}(i= \mbox{\hyperlink{classcut_sphere_abc9077d50df05196d90450598bccff14}{xcenter}} - \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}; i<\mbox{\hyperlink{classcut_sphere_abc9077d50df05196d90450598bccff14}{xcenter}} + \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}; i++)}
+\DoxyCodeLine{25         \{}
+\DoxyCodeLine{26             \textcolor{keywordflow}{for}(j= \mbox{\hyperlink{classcut_sphere_add926dd22a432d2e369af86885b06118}{ycenter}} - \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}; j< \mbox{\hyperlink{classcut_sphere_add926dd22a432d2e369af86885b06118}{ycenter}} + \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}; j++)}
+\DoxyCodeLine{27             \{}
+\DoxyCodeLine{28                 \textcolor{keywordflow}{for}(k= \mbox{\hyperlink{classcut_sphere_a6aee9641be3fe4586d21554291260003}{zcenter}} - \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}; k< \mbox{\hyperlink{classcut_sphere_a6aee9641be3fe4586d21554291260003}{zcenter}} + \mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}}; k++)}
+\DoxyCodeLine{29                 \{}
+\DoxyCodeLine{30                     \textcolor{keywordflow}{if} ((pow((i-\mbox{\hyperlink{classcut_sphere_abc9077d50df05196d90450598bccff14}{xcenter}}),2)) + (pow((j-\mbox{\hyperlink{classcut_sphere_add926dd22a432d2e369af86885b06118}{ycenter}}),2)) + (pow((k-\mbox{\hyperlink{classcut_sphere_a6aee9641be3fe4586d21554291260003}{zcenter}}),2)) <= (pow(\mbox{\hyperlink{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}{radius}},2)))}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32                     \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34                         t.\mbox{\hyperlink{classsculptor_a287e61d97f0b874c69af3e73758e3281}{cutvoxel}}(i,j,k);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36                     \}}
+\DoxyCodeLine{37                 \}}
+\DoxyCodeLine{38             \}}
+\DoxyCodeLine{39         \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+\subsection{Atributos}
+\mbox{\Hypertarget{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}\label{classcut_sphere_ae9fae77b83fad1abf662d7dfeae81fb0}} 
+\index{cutSphere@{cutSphere}!radius@{radius}}
+\index{radius@{radius}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily int cut\+Sphere\+::radius\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcut_sphere_abc9077d50df05196d90450598bccff14}\label{classcut_sphere_abc9077d50df05196d90450598bccff14}} 
+\index{cutSphere@{cutSphere}!xcenter@{xcenter}}
+\index{xcenter@{xcenter}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{xcenter}{xcenter}}
+{\footnotesize\ttfamily int cut\+Sphere\+::xcenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcut_sphere_add926dd22a432d2e369af86885b06118}\label{classcut_sphere_add926dd22a432d2e369af86885b06118}} 
+\index{cutSphere@{cutSphere}!ycenter@{ycenter}}
+\index{ycenter@{ycenter}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{ycenter}{ycenter}}
+{\footnotesize\ttfamily int cut\+Sphere\+::ycenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcut_sphere_a6aee9641be3fe4586d21554291260003}\label{classcut_sphere_a6aee9641be3fe4586d21554291260003}} 
+\index{cutSphere@{cutSphere}!zcenter@{zcenter}}
+\index{zcenter@{zcenter}!cutSphere@{cutSphere}}
+\subsubsection{\texorpdfstring{zcenter}{zcenter}}
+{\footnotesize\ttfamily int cut\+Sphere\+::zcenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cutsphere_8h}{cutsphere.\+h}}\item 
+\mbox{\hyperlink{cutsphere_8cpp}{cutsphere.\+cpp}}\end{DoxyCompactItemize}

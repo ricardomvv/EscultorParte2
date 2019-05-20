@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DocumentaçãoEscultor: Código-Fonte de cutsphere.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DocumentaçãoEscultor
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cutsphere.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cutsphere_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CUTSPHERE_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CUTSPHERE_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="figurageometrica_8h.html">figurageometrica.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classcut_sphere.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcut_sphere.html">cutSphere</a> : <span class="keyword">public</span> <a class="code" href="class_figura_geometrica.html">FiguraGeometrica</a>{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classcut_sphere.html#a6aee9641be3fe4586d21554291260003">    8</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcut_sphere.html#abc9077d50df05196d90450598bccff14">xcenter</a>, <a class="code" href="classcut_sphere.html#add926dd22a432d2e369af86885b06118">ycenter</a>, <a class="code" href="classcut_sphere.html#a6aee9641be3fe4586d21554291260003">zcenter</a>, <a class="code" href="classcut_sphere.html#ae9fae77b83fad1abf662d7dfeae81fb0">radius</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classcut_sphere.html#a5fb115ed9c9fbeed015b247910036d61">cutSphere</a>(<span class="keywordtype">int</span> _xc, <span class="keywordtype">int</span> _yc, <span class="keywordtype">int</span> _zc, <span class="keywordtype">int</span> _r);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcut_sphere.html#a647eb845a169437c5c336bdcb282b075">draw</a>(<a class="code" href="classsculptor.html">sculptor</a> &amp;t);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classcut_sphere.html#acc41c446f3ae38d39b18b7b08e34f236">~cutSphere</a>();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif // CUTSPHERE_H</span></div><div class="ttc" id="classcut_sphere_html"><div class="ttname"><a href="classcut_sphere.html">cutSphere</a></div><div class="ttdef"><b>Definition:</b> cutsphere.h:5</div></div>
+<div class="ttc" id="classcut_sphere_html_a6aee9641be3fe4586d21554291260003"><div class="ttname"><a href="classcut_sphere.html#a6aee9641be3fe4586d21554291260003">cutSphere::zcenter</a></div><div class="ttdeci">int zcenter</div><div class="ttdef"><b>Definition:</b> cutsphere.h:8</div></div>
+<div class="ttc" id="classcut_sphere_html_acc41c446f3ae38d39b18b7b08e34f236"><div class="ttname"><a href="classcut_sphere.html#acc41c446f3ae38d39b18b7b08e34f236">cutSphere::~cutSphere</a></div><div class="ttdeci">~cutSphere()</div><div class="ttdef"><b>Definition:</b> cutsphere.cpp:14</div></div>
+<div class="ttc" id="classcut_sphere_html_add926dd22a432d2e369af86885b06118"><div class="ttname"><a href="classcut_sphere.html#add926dd22a432d2e369af86885b06118">cutSphere::ycenter</a></div><div class="ttdeci">int ycenter</div><div class="ttdef"><b>Definition:</b> cutsphere.h:8</div></div>
+<div class="ttc" id="class_figura_geometrica_html"><div class="ttname"><a href="class_figura_geometrica.html">FiguraGeometrica</a></div><div class="ttdef"><b>Definition:</b> figurageometrica.h:6</div></div>
+<div class="ttc" id="classsculptor_html"><div class="ttname"><a href="classsculptor.html">sculptor</a></div><div class="ttdoc">The sculptor class tem como objetivo reunir as caracteristicas que definem as unidades que compõe o d...</div><div class="ttdef"><b>Definition:</b> sculptor.h:10</div></div>
+<div class="ttc" id="classcut_sphere_html_ae9fae77b83fad1abf662d7dfeae81fb0"><div class="ttname"><a href="classcut_sphere.html#ae9fae77b83fad1abf662d7dfeae81fb0">cutSphere::radius</a></div><div class="ttdeci">int radius</div><div class="ttdef"><b>Definition:</b> cutsphere.h:8</div></div>
+<div class="ttc" id="figurageometrica_8h_html"><div class="ttname"><a href="figurageometrica_8h.html">figurageometrica.h</a></div></div>
+<div class="ttc" id="classcut_sphere_html_a5fb115ed9c9fbeed015b247910036d61"><div class="ttname"><a href="classcut_sphere.html#a5fb115ed9c9fbeed015b247910036d61">cutSphere::cutSphere</a></div><div class="ttdeci">cutSphere(int _xc, int _yc, int _zc, int _r)</div><div class="ttdef"><b>Definition:</b> cutsphere.cpp:4</div></div>
+<div class="ttc" id="classcut_sphere_html_a647eb845a169437c5c336bdcb282b075"><div class="ttname"><a href="classcut_sphere.html#a647eb845a169437c5c336bdcb282b075">cutSphere::draw</a></div><div class="ttdeci">void draw(sculptor &amp;t)</div><div class="ttdef"><b>Definition:</b> cutsphere.cpp:20</div></div>
+<div class="ttc" id="classcut_sphere_html_abc9077d50df05196d90450598bccff14"><div class="ttname"><a href="classcut_sphere.html#abc9077d50df05196d90450598bccff14">cutSphere::xcenter</a></div><div class="ttdeci">int xcenter</div><div class="ttdef"><b>Definition:</b> cutsphere.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

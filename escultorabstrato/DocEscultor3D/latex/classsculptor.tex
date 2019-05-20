@@ -1,0 +1,558 @@
+\hypertarget{classsculptor}{}\section{Referência da Classe sculptor}
+\label{classsculptor}\index{sculptor@{sculptor}}
+
+
+The sculptor class tem como objetivo reunir as caracteristicas que definem as unidades que compõe o desenho 3D, sendo assim representado por um cubo de lado 1, possuindo os atributos de cor, no padrão R\+GB.  
+
+
+
+
+{\ttfamily \#include $<$sculptor.\+h$>$}
+
+\subsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsculptor_a7ee1a5fad8c2976b8cc0d781eab131fa}{sculptor}} (int \+\_\+nx, int \+\_\+ny, int \+\_\+nz)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsculptor_a7ee1a5fad8c2976b8cc0d781eab131fa}{sculptor\+::sculptor}} é lasse responsável pela e manipulação da matriz de voxels utilizado para representar as figuras geométricas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsculptor_a34706c529c6ce1129328ab5a6a4ddcef}{$\sim$sculptor}} ()
+\item 
+void \mbox{\hyperlink{classsculptor_af0f153c78da4204025e19f9b3f342a19}{setcolor}} (float r, float g, float b, float alpha)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsculptor_af0f153c78da4204025e19f9b3f342a19}{sculptor\+::setcolor}} Definir as cores, fazendo com que o valores das cores (R,G,B) fiquem entre 0 e 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsculptor_a08d37a134605421ffc6a4cf82f0a9c84}{putvoxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsculptor_a08d37a134605421ffc6a4cf82f0a9c84}{sculptor\+::putvoxel}} Ativa o voxel na posição (x,y,z),fazendo is\+On = true e atribuindo a cor atual de desenho \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsculptor_a287e61d97f0b874c69af3e73758e3281}{cutvoxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsculptor_a287e61d97f0b874c69af3e73758e3281}{sculptor\+::cutvoxel}} Desativa o voxel na posição (x,y,z),fazendo is\+On = false \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsculptor_a1a1381e10d55a53d5c76da607f0f3da0}{write\+O\+FF}} (string filename)
+\item 
+void \mbox{\hyperlink{classsculptor_aac8ef77c6002fec6c244c0f67e36e4c5}{write\+V\+E\+CT}} (string filename)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}
+\item 
+int \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}
+\item 
+int \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}
+\item 
+float \mbox{\hyperlink{classsculptor_a9833525d9f5fdef71d473b7f77364756}{\+\_\+r}}
+\item 
+float \mbox{\hyperlink{classsculptor_a0ed1383995072ec408e435240c893583}{\+\_\+g}}
+\item 
+float \mbox{\hyperlink{classsculptor_a1982061e6b45f8138453dcb550cf3bec}{\+\_\+b}}
+\item 
+float \mbox{\hyperlink{classsculptor_a03912b63e3c4e06c7aae17efc115f051}{\+\_\+a}}
+\item 
+\mbox{\hyperlink{struct_voxel}{Voxel}} $\ast$$\ast$$\ast$ \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+The sculptor class tem como objetivo reunir as caracteristicas que definem as unidades que compõe o desenho 3D, sendo assim representado por um cubo de lado 1, possuindo os atributos de cor, no padrão R\+GB. 
+
+\subsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classsculptor_a7ee1a5fad8c2976b8cc0d781eab131fa}\label{classsculptor_a7ee1a5fad8c2976b8cc0d781eab131fa}} 
+\index{sculptor@{sculptor}!sculptor@{sculptor}}
+\index{sculptor@{sculptor}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{sculptor()}{sculptor()}}
+{\footnotesize\ttfamily sculptor\+::sculptor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nx,  }\item[{int}]{\+\_\+ny,  }\item[{int}]{\+\_\+nz }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsculptor_a7ee1a5fad8c2976b8cc0d781eab131fa}{sculptor\+::sculptor}} é lasse responsável pela e manipulação da matriz de voxels utilizado para representar as figuras geométricas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+nx} & É Dimensão X da matriz de Voxels. \\
+\hline
+{\em \+\_\+ny} & É Dimensão Y da matriz de Voxels. \\
+\hline
+{\em \+\_\+nz} & É Dimensão Z da matriz de Voxels. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}} = \_nx;}
+\DoxyCodeLine{19     \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}} = \_ny;}
+\DoxyCodeLine{20     \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}} = \_nz;}
+\DoxyCodeLine{21     \mbox{\hyperlink{classsculptor_a9833525d9f5fdef71d473b7f77364756}{\_r}} = 0;}
+\DoxyCodeLine{22     \mbox{\hyperlink{classsculptor_a0ed1383995072ec408e435240c893583}{\_g}} = 0;}
+\DoxyCodeLine{23     \mbox{\hyperlink{classsculptor_a1982061e6b45f8138453dcb550cf3bec}{\_b}} = 0;}
+\DoxyCodeLine{24     \mbox{\hyperlink{classsculptor_a03912b63e3c4e06c7aae17efc115f051}{\_a}} = 0;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{//Para realizar a alocação dinâmica de memória (usando "new" em C++) e gerar a matriz3D.}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}} = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}**[\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}];}
+\DoxyCodeLine{30        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[0] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}*[\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}*\mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}];}
+\DoxyCodeLine{31        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[0][0] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}[\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}*\mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}*\mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}];}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{34        \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36            \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i+1] = \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i] + \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{39            \{}
+\DoxyCodeLine{40                \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j+1] = \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j] + \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}};}
+\DoxyCodeLine{41            \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43        \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{46        \{}
+\DoxyCodeLine{47            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{48            \{}
+\DoxyCodeLine{49                \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{50                \{}
+\DoxyCodeLine{51                    \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}} = 0;}
+\DoxyCodeLine{52                    \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}} = 0;}
+\DoxyCodeLine{53                    \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}} = 0;}
+\DoxyCodeLine{54                    \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}} = 0;}
+\DoxyCodeLine{55                    \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a6fbe8bd53f64685ac4210726d40fc775}{isOn}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{56                \}}
+\DoxyCodeLine{57            \}}
+\DoxyCodeLine{58        \}}
+\DoxyCodeLine{59    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsculptor_a34706c529c6ce1129328ab5a6a4ddcef}\label{classsculptor_a34706c529c6ce1129328ab5a6a4ddcef}} 
+\index{sculptor@{sculptor}!````~sculptor@{$\sim$sculptor}}
+\index{````~sculptor@{$\sim$sculptor}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{$\sim$sculptor()}{~sculptor()}}
+{\footnotesize\ttfamily sculptor\+::$\sim$sculptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63    \{}
+\DoxyCodeLine{64        \textcolor{comment}{//Destrutor de Classes}}
+\DoxyCodeLine{65        \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}} == 0 || \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}} ==0 || \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}} ==0)\{}
+\DoxyCodeLine{66            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{67        \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69        \textcolor{keyword}{delete} [] \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[0][0];}
+\DoxyCodeLine{70        \textcolor{keyword}{delete} [] \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[0];}
+\DoxyCodeLine{71        \textcolor{keyword}{delete} [] \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}};}
+\DoxyCodeLine{72    \}}
+
+\end{DoxyCode}
+
+
+\subsection{Funções membros}
+\mbox{\Hypertarget{classsculptor_a287e61d97f0b874c69af3e73758e3281}\label{classsculptor_a287e61d97f0b874c69af3e73758e3281}} 
+\index{sculptor@{sculptor}!cutvoxel@{cutvoxel}}
+\index{cutvoxel@{cutvoxel}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{cutvoxel()}{cutvoxel()}}
+{\footnotesize\ttfamily void sculptor\+::cutvoxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsculptor_a287e61d97f0b874c69af3e73758e3281}{sculptor\+::cutvoxel}} Desativa o voxel na posição (x,y,z),fazendo is\+On = false 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148    \{}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[x][y][z].\mbox{\hyperlink{struct_voxel_a6fbe8bd53f64685ac4210726d40fc775}{isOn}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsculptor_a08d37a134605421ffc6a4cf82f0a9c84}\label{classsculptor_a08d37a134605421ffc6a4cf82f0a9c84}} 
+\index{sculptor@{sculptor}!putvoxel@{putvoxel}}
+\index{putvoxel@{putvoxel}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{putvoxel()}{putvoxel()}}
+{\footnotesize\ttfamily void sculptor\+::putvoxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsculptor_a08d37a134605421ffc6a4cf82f0a9c84}{sculptor\+::putvoxel}} Ativa o voxel na posição (x,y,z),fazendo is\+On = true e atribuindo a cor atual de desenho 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163    \{}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[x][y][z].\mbox{\hyperlink{struct_voxel_a6fbe8bd53f64685ac4210726d40fc775}{isOn}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{168        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[x][y][z].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}} = \mbox{\hyperlink{classsculptor_a9833525d9f5fdef71d473b7f77364756}{\_r}};}
+\DoxyCodeLine{169        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[x][y][z].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}} = \mbox{\hyperlink{classsculptor_a0ed1383995072ec408e435240c893583}{\_g}};}
+\DoxyCodeLine{170        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[x][y][z].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}} = \mbox{\hyperlink{classsculptor_a1982061e6b45f8138453dcb550cf3bec}{\_b}};}
+\DoxyCodeLine{171        \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[x][y][z].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}} = \mbox{\hyperlink{classsculptor_a03912b63e3c4e06c7aae17efc115f051}{\_a}};}
+\DoxyCodeLine{172    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsculptor_af0f153c78da4204025e19f9b3f342a19}\label{classsculptor_af0f153c78da4204025e19f9b3f342a19}} 
+\index{sculptor@{sculptor}!setcolor@{setcolor}}
+\index{setcolor@{setcolor}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{setcolor()}{setcolor()}}
+{\footnotesize\ttfamily void sculptor\+::setcolor (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classsculptor_af0f153c78da4204025e19f9b3f342a19}{sculptor\+::setcolor}} Definir as cores, fazendo com que o valores das cores (R,G,B) fiquem entre 0 e 1. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & \\
+\hline
+{\em g} & \\
+\hline
+{\em b} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81    \{}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84        \textcolor{keywordflow}{if}(r >1)}
+\DoxyCodeLine{85        \{}
+\DoxyCodeLine{86            \mbox{\hyperlink{classsculptor_a9833525d9f5fdef71d473b7f77364756}{\_r}} = 1;}
+\DoxyCodeLine{87        \}}
+\DoxyCodeLine{88        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(r <0)}
+\DoxyCodeLine{89        \{}
+\DoxyCodeLine{90            \mbox{\hyperlink{classsculptor_a9833525d9f5fdef71d473b7f77364756}{\_r}} = 0;}
+\DoxyCodeLine{91        \}}
+\DoxyCodeLine{92        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{93        \{}
+\DoxyCodeLine{94            \mbox{\hyperlink{classsculptor_a9833525d9f5fdef71d473b7f77364756}{\_r}} = r;}
+\DoxyCodeLine{95        \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97        \textcolor{comment}{// Para GREEN:}}
+\DoxyCodeLine{98        \textcolor{keywordflow}{if}(g >1)}
+\DoxyCodeLine{99        \{}
+\DoxyCodeLine{100            \mbox{\hyperlink{classsculptor_a0ed1383995072ec408e435240c893583}{\_g}} = 1;}
+\DoxyCodeLine{101        \}}
+\DoxyCodeLine{102        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(g <0)}
+\DoxyCodeLine{103        \{}
+\DoxyCodeLine{104            \mbox{\hyperlink{classsculptor_a0ed1383995072ec408e435240c893583}{\_g}} = 0;}
+\DoxyCodeLine{105        \}}
+\DoxyCodeLine{106        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{107        \{}
+\DoxyCodeLine{108            \mbox{\hyperlink{classsculptor_a0ed1383995072ec408e435240c893583}{\_g}} = g;}
+\DoxyCodeLine{109        \}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111        \textcolor{comment}{// Para BLUE:}}
+\DoxyCodeLine{112        \textcolor{keywordflow}{if}(b >1)}
+\DoxyCodeLine{113        \{}
+\DoxyCodeLine{114            \mbox{\hyperlink{classsculptor_a1982061e6b45f8138453dcb550cf3bec}{\_b}} = 1;}
+\DoxyCodeLine{115        \}}
+\DoxyCodeLine{116        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(b <0)}
+\DoxyCodeLine{117        \{}
+\DoxyCodeLine{118            \mbox{\hyperlink{classsculptor_a1982061e6b45f8138453dcb550cf3bec}{\_b}} = 0;}
+\DoxyCodeLine{119        \}}
+\DoxyCodeLine{120        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{121        \{}
+\DoxyCodeLine{122            \mbox{\hyperlink{classsculptor_a1982061e6b45f8138453dcb550cf3bec}{\_b}} = b;}
+\DoxyCodeLine{123        \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125        \textcolor{comment}{//Para Alpha:}}
+\DoxyCodeLine{126        \textcolor{keywordflow}{if}(alpha >1)}
+\DoxyCodeLine{127        \{}
+\DoxyCodeLine{128            \mbox{\hyperlink{classsculptor_a03912b63e3c4e06c7aae17efc115f051}{\_a}} = 1;}
+\DoxyCodeLine{129        \}}
+\DoxyCodeLine{130        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(alpha <0)}
+\DoxyCodeLine{131        \{}
+\DoxyCodeLine{132            \mbox{\hyperlink{classsculptor_a03912b63e3c4e06c7aae17efc115f051}{\_a}} = 0;}
+\DoxyCodeLine{133        \}}
+\DoxyCodeLine{134        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{135        \{}
+\DoxyCodeLine{136            \mbox{\hyperlink{classsculptor_a03912b63e3c4e06c7aae17efc115f051}{\_a}} = alpha;}
+\DoxyCodeLine{137        \}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsculptor_a1a1381e10d55a53d5c76da607f0f3da0}\label{classsculptor_a1a1381e10d55a53d5c76da607f0f3da0}} 
+\index{sculptor@{sculptor}!writeOFF@{writeOFF}}
+\index{writeOFF@{writeOFF}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
+{\footnotesize\ttfamily void sculptor\+::write\+O\+FF (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{177    \{}
+\DoxyCodeLine{178        \textcolor{keywordtype}{char} pontos[\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}][\mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}][\mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}];}
+\DoxyCodeLine{179        \textcolor{keywordtype}{int} i,j,k;}
+\DoxyCodeLine{180        \textcolor{keywordtype}{int} Nvoxels = 0; \textcolor{comment}{// Variavel que contabiliza o numero de Voxels.}}
+\DoxyCodeLine{181        \textcolor{keywordtype}{int} Nvar = 0;}
+\DoxyCodeLine{182        \textcolor{keywordtype}{bool} vX, vY, vZ;}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184        ofstream fout;}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186        \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{187        \{}
+\DoxyCodeLine{188            \textcolor{keywordflow}{for}(j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{189            \{}
+\DoxyCodeLine{190                \textcolor{keywordflow}{for}(k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{191                \{}
+\DoxyCodeLine{192                    pontos[i][j][k] = 0; \textcolor{comment}{//Inicialmente preenchemos a matriz com 0}}
+\DoxyCodeLine{193                \}}
+\DoxyCodeLine{194            \}}
+\DoxyCodeLine{195        \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197           \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}-1; i++)}
+\DoxyCodeLine{198               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}-1; j++)}
+\DoxyCodeLine{199                   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 1; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}-1; k++)\{}
+\DoxyCodeLine{200                       vX = \textcolor{keyword}{false}; vY = \textcolor{keyword}{false}; vZ=\textcolor{keyword}{false};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202                       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k-1].isOn \&\& \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k+1].isOn)}
+\DoxyCodeLine{203                           vZ = \textcolor{keyword}{true};}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205                       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j-1][k].isOn \&\& \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j+1][k].isOn)}
+\DoxyCodeLine{206                           vY = \textcolor{keyword}{true};}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208                       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i-1][j][k].isOn \&\& \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i+1][j][k].isOn)}
+\DoxyCodeLine{209                           vX = \textcolor{keyword}{true};}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211                       \textcolor{keywordflow}{if}(vX \&\& vY \&\& vZ)\{}
+\DoxyCodeLine{212                           pontos[i][j][k] = 1;}
+\DoxyCodeLine{213                       \}}
+\DoxyCodeLine{214                   \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217        fout.open(filename.c\_str());}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219        \textcolor{keywordflow}{if}(fout.is\_open() == \textcolor{keyword}{false})}
+\DoxyCodeLine{220        \{}
+\DoxyCodeLine{221            cout << \textcolor{stringliteral}{"arquivo nao foi aberto\(\backslash\)n"};}
+\DoxyCodeLine{222            exit(1);}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224        \}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226        fout<<\textcolor{stringliteral}{"OFF"}<<endl;}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230        \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{231        \{}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233            \textcolor{keywordflow}{for}(j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{234            \{}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236                \textcolor{keywordflow}{for}(k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{237                \{}
+\DoxyCodeLine{238                    \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].isOn \&\& pontos[i][j][k] == 0)\{}
+\DoxyCodeLine{239                    Nvoxels++; \textcolor{comment}{// Essa parte que vai permitir encontrar a quantidade de voxels, por exemplo: na dimenssão 2x2x2 existem 24 Voxels.}}
+\DoxyCodeLine{240                         \}}
+\DoxyCodeLine{241                \}}
+\DoxyCodeLine{242            \}}
+\DoxyCodeLine{243        \}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245        fout<<Nvoxels*8<<\textcolor{stringliteral}{" "}<<Nvoxels*6<<\textcolor{stringliteral}{" 0"}<<endl;\textcolor{comment}{//SEGUNDA LINHA}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247        \textcolor{keywordflow}{for}(j=0; j<\mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{248        \{}
+\DoxyCodeLine{249            \textcolor{keywordflow}{for} (i=0; i<\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{250            \{}
+\DoxyCodeLine{251                \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<\mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{252                \{}
+\DoxyCodeLine{253                    fout<<-0.5+i<<\textcolor{stringliteral}{" "}<<0.5+j<<\textcolor{stringliteral}{" "}<<-0.5+k<<endl; \textcolor{comment}{//TERCEIRA LINHA EM DIANTE}}
+\DoxyCodeLine{254                    fout<<-0.5+i<<\textcolor{stringliteral}{" "}<<-0.5+j<<\textcolor{stringliteral}{" "}<<-0.5+k<<endl;}
+\DoxyCodeLine{255                    fout<<0.5+i<<\textcolor{stringliteral}{" "}<<-0.5+j<<\textcolor{stringliteral}{" "}<<-0.5+k<<endl;}
+\DoxyCodeLine{256                    fout<<0.5+i<<\textcolor{stringliteral}{" "}<<0.5+j<<\textcolor{stringliteral}{" "}<<-0.5+k<<endl;}
+\DoxyCodeLine{257                    fout<<-0.5+i<<\textcolor{stringliteral}{" "}<<0.5+j<<\textcolor{stringliteral}{" "}<<0.5+k<<endl;}
+\DoxyCodeLine{258                    fout<<-0.5+i<<\textcolor{stringliteral}{" "}<<-0.5+j<<\textcolor{stringliteral}{" "}<<0.5+k<<endl;}
+\DoxyCodeLine{259                    fout<<0.5+i<<\textcolor{stringliteral}{" "}<<-0.5+j<<\textcolor{stringliteral}{" "}<<0.5+k<<endl;}
+\DoxyCodeLine{260                    fout<<0.5+i<<\textcolor{stringliteral}{" "}<<0.5+j<<\textcolor{stringliteral}{" "}<<0.5+k<<endl; \textcolor{comment}{//DÉCIMA LINHA}}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262                \}}
+\DoxyCodeLine{263            \}}
+\DoxyCodeLine{264        \}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268        \textcolor{keywordflow}{for}(k=0; k<\mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{269        \{}
+\DoxyCodeLine{270            \textcolor{keywordflow}{for}(j=0; j<\mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{271            \{}
+\DoxyCodeLine{272                \textcolor{keywordflow}{for} (i=0; i<\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{273                \{}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275                    fout <<\textcolor{stringliteral}{"4 "}<<0+Nvar*8<<\textcolor{stringliteral}{" "}<<3+Nvar*8<<\textcolor{stringliteral}{" "}<<2+Nvar*8<<\textcolor{stringliteral}{" "}<<1+Nvar*8<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}}<<endl;}
+\DoxyCodeLine{276                    fout <<\textcolor{stringliteral}{"4 "}<<4+Nvar*8<<\textcolor{stringliteral}{" "}<<5+Nvar*8<<\textcolor{stringliteral}{" "}<<6+Nvar*8<<\textcolor{stringliteral}{" "}<<7+Nvar*8<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}}<<endl;}
+\DoxyCodeLine{277                    fout <<\textcolor{stringliteral}{"4 "}<<0+Nvar*8<<\textcolor{stringliteral}{" "}<<1+Nvar*8<<\textcolor{stringliteral}{" "}<<5+Nvar*8<<\textcolor{stringliteral}{" "}<<4+Nvar*8<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}}<<endl;}
+\DoxyCodeLine{278                    fout <<\textcolor{stringliteral}{"4 "}<<0+Nvar*8<<\textcolor{stringliteral}{" "}<<4+Nvar*8<<\textcolor{stringliteral}{" "}<<7+Nvar*8<<\textcolor{stringliteral}{" "}<<3+Nvar*8<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}}<<endl;}
+\DoxyCodeLine{279                    fout <<\textcolor{stringliteral}{"4 "}<<3+Nvar*8<<\textcolor{stringliteral}{" "}<<7+Nvar*8<<\textcolor{stringliteral}{" "}<<6+Nvar*8<<\textcolor{stringliteral}{" "}<<2+Nvar*8<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}}<<endl;}
+\DoxyCodeLine{280                    fout<<\textcolor{stringliteral}{"4 "}<<1+Nvar*8<<\textcolor{stringliteral}{" "}<<2+Nvar*8<<\textcolor{stringliteral}{" "}<<6+Nvar*8<<\textcolor{stringliteral}{" "}<<5+Nvar*8<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}}<<\textcolor{stringliteral}{" "}<<\mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}}<<endl;}
+\DoxyCodeLine{281                    Nvar++;}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283                \}}
+\DoxyCodeLine{284            \}}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286        \}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsculptor_aac8ef77c6002fec6c244c0f67e36e4c5}\label{classsculptor_aac8ef77c6002fec6c244c0f67e36e4c5}} 
+\index{sculptor@{sculptor}!writeVECT@{writeVECT}}
+\index{writeVECT@{writeVECT}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{writeVECT()}{writeVECT()}}
+{\footnotesize\ttfamily void sculptor\+::write\+V\+E\+CT (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{291    \{}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293        \textcolor{keywordtype}{int} Nvoxels = 0;}
+\DoxyCodeLine{294        \textcolor{keywordtype}{int} pontos[\mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}][\mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}][\mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}];}
+\DoxyCodeLine{295        \textcolor{keywordtype}{int} i,j,k;}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298        \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{299        \{}
+\DoxyCodeLine{300            \textcolor{keywordflow}{for}(j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{301            \{}
+\DoxyCodeLine{302                \textcolor{keywordflow}{for}(k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{303                \{}
+\DoxyCodeLine{304                    pontos[i][j][k] = 0;}
+\DoxyCodeLine{305                \}}
+\DoxyCodeLine{306            \}}
+\DoxyCodeLine{307        \}}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309        ofstream fout;}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311        fout.open(filename.c\_str());}
+\DoxyCodeLine{312        \textcolor{keywordflow}{if}(fout.is\_open()== \textcolor{keyword}{false})}
+\DoxyCodeLine{313        \{}
+\DoxyCodeLine{314            cout << \textcolor{stringliteral}{"arquivo nao foi aberto\(\backslash\)n"};}
+\DoxyCodeLine{315            exit(1);}
+\DoxyCodeLine{316        \}}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318        fout << \textcolor{stringliteral}{"VECT"} << endl;}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320        \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{321        \{}
+\DoxyCodeLine{322            \textcolor{keywordflow}{for}(j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{323            \{}
+\DoxyCodeLine{324                \textcolor{keywordflow}{for}(k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{325                \{}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327                    Nvoxels++;}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329                \}}
+\DoxyCodeLine{330            \}}
+\DoxyCodeLine{331        \}}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{333        fout << Nvoxels << \textcolor{stringliteral}{" "} << Nvoxels << \textcolor{stringliteral}{" "} << Nvoxels << endl;}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335        \textcolor{keywordflow}{for} (i =0; i<Nvoxels; i++)}
+\DoxyCodeLine{336        \{}
+\DoxyCodeLine{337            fout << \textcolor{stringliteral}{"1"} <<\textcolor{stringliteral}{" "};}
+\DoxyCodeLine{338        \}}
+\DoxyCodeLine{339        fout << endl;}
+\DoxyCodeLine{340        \textcolor{keywordflow}{for} (i =0; i<Nvoxels; i++)}
+\DoxyCodeLine{341        \{}
+\DoxyCodeLine{342            fout << \textcolor{stringliteral}{"1"} <<\textcolor{stringliteral}{" "};}
+\DoxyCodeLine{343        \}}
+\DoxyCodeLine{344        fout << endl;}
+\DoxyCodeLine{345        \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{346        \{}
+\DoxyCodeLine{347            \textcolor{keywordflow}{for}(j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{348            \{}
+\DoxyCodeLine{349                \textcolor{keywordflow}{for}(k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{350                \{}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352                    fout << i <<\textcolor{stringliteral}{" "}<< j <<\textcolor{stringliteral}{" "}<< k << endl;}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354                \}}
+\DoxyCodeLine{355            \}}
+\DoxyCodeLine{356        \}}
+\DoxyCodeLine{357        \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}{nx}}; i++)}
+\DoxyCodeLine{358        \{}
+\DoxyCodeLine{359            \textcolor{keywordflow}{for}(j = 0; j < \mbox{\hyperlink{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}{ny}}; j++)}
+\DoxyCodeLine{360            \{}
+\DoxyCodeLine{361                \textcolor{keywordflow}{for}(k = 0; k < \mbox{\hyperlink{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}{nz}}; k++)}
+\DoxyCodeLine{362                \{}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{364                    fout << \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a06872ec79b836120b551a848968c0f1b}{r}} <<\textcolor{stringliteral}{" "}<< \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a27c0da1ed2ff430401d23ff171612a73}{g}} <<\textcolor{stringliteral}{" "}<< \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a5cd8432b1d7d0fd8b79e0fc7d10373a8}{b}} <<\textcolor{stringliteral}{" "}<< \mbox{\hyperlink{classsculptor_a2d777d79278a01afcf83a9a257c12c73}{matriz3D}}[i][j][k].\mbox{\hyperlink{struct_voxel_a3ce2579eb0a9f09a07112ce7498a638e}{a}} << endl;}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366                \}}
+\DoxyCodeLine{367            \}}
+\DoxyCodeLine{368        \}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370    \}}
+
+\end{DoxyCode}
+
+
+\subsection{Atributos}
+\mbox{\Hypertarget{classsculptor_a03912b63e3c4e06c7aae17efc115f051}\label{classsculptor_a03912b63e3c4e06c7aae17efc115f051}} 
+\index{sculptor@{sculptor}!\_a@{\_a}}
+\index{\_a@{\_a}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{\_a}{\_a}}
+{\footnotesize\ttfamily float sculptor\+::\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_a1982061e6b45f8138453dcb550cf3bec}\label{classsculptor_a1982061e6b45f8138453dcb550cf3bec}} 
+\index{sculptor@{sculptor}!\_b@{\_b}}
+\index{\_b@{\_b}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{\_b}{\_b}}
+{\footnotesize\ttfamily float sculptor\+::\+\_\+b\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_a0ed1383995072ec408e435240c893583}\label{classsculptor_a0ed1383995072ec408e435240c893583}} 
+\index{sculptor@{sculptor}!\_g@{\_g}}
+\index{\_g@{\_g}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{\_g}{\_g}}
+{\footnotesize\ttfamily float sculptor\+::\+\_\+g\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_a9833525d9f5fdef71d473b7f77364756}\label{classsculptor_a9833525d9f5fdef71d473b7f77364756}} 
+\index{sculptor@{sculptor}!\_r@{\_r}}
+\index{\_r@{\_r}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{\_r}{\_r}}
+{\footnotesize\ttfamily float sculptor\+::\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_a2d777d79278a01afcf83a9a257c12c73}\label{classsculptor_a2d777d79278a01afcf83a9a257c12c73}} 
+\index{sculptor@{sculptor}!matriz3D@{matriz3D}}
+\index{matriz3D@{matriz3D}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{matriz3D}{matriz3D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_voxel}{Voxel}}$\ast$$\ast$$\ast$ sculptor\+::matriz3D\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}\label{classsculptor_a5fa913adf55eb2aabf99d6dd0c848c0f}} 
+\index{sculptor@{sculptor}!nx@{nx}}
+\index{nx@{nx}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily int sculptor\+::nx\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}\label{classsculptor_aaaf8222a3f4216629443261e6b9d2e73}} 
+\index{sculptor@{sculptor}!ny@{ny}}
+\index{ny@{ny}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily int sculptor\+::ny\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}\label{classsculptor_aa9907276dba66f1f7a73b8f337c5f793}} 
+\index{sculptor@{sculptor}!nz@{nz}}
+\index{nz@{nz}!sculptor@{sculptor}}
+\subsubsection{\texorpdfstring{nz}{nz}}
+{\footnotesize\ttfamily int sculptor\+::nz\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sculptor_8h}{sculptor.\+h}}\item 
+\mbox{\hyperlink{sculptor_8cpp}{sculptor.\+cpp}}\end{DoxyCompactItemize}

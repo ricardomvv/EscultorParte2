@@ -1,0 +1,174 @@
+\hypertarget{main_8cpp}{}\section{Referência do Arquivo main.\+cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sculptor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}figurageometrica.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}voxel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}putbox.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}putvoxel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cutvoxel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cutbox.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}putsphere.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cutsphere.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}putellipsoid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cutellipsoid.\+h\char`\"{}}\newline
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{classsculptor}{sculptor}} *s;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         std::ifstream fin(\textcolor{stringliteral}{"C:/Users/Ricardo Varela/Documents/escultorabstrato/steste.txt"});}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         (fin.is\_open());\{}
+\DoxyCodeLine{33             \textcolor{keywordtype}{string} linha;}
+\DoxyCodeLine{34             \textcolor{keywordflow}{while} (getline(fin, linha)) \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"dim"}) != std::string::npos) \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39                     std::istringstream linhaEmStream(linha);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41                     \textcolor{keywordtype}{int} x, y, z;}
+\DoxyCodeLine{42                     linhaEmStream >> x >> y >> z;}
+\DoxyCodeLine{43                     cout << \textcolor{stringliteral}{"Dimensões: "} << x << \textcolor{stringliteral}{" "} << y << \textcolor{stringliteral}{" "} << z << endl;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45                     s = \textcolor{keyword}{new} \mbox{\hyperlink{classsculptor}{sculptor}}(x, y, z);}
+\DoxyCodeLine{46                 \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"putbox"}) != std::string::npos) \{}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51                     std::istringstream StreamLinha(linha);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53                     cout << \textcolor{stringliteral}{"Putbox"} << endl;}
+\DoxyCodeLine{54                     \textcolor{keywordtype}{int} x0, x1, y0, y1, z0, z1, r, g, b;}
+\DoxyCodeLine{55                     \textcolor{keywordtype}{float} a;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57                     StreamLinha >> x0 >> x1 >> y0 >> y1 >> z0 >> z1 >> r >> g >> b >> a;}
+\DoxyCodeLine{58                     \mbox{\hyperlink{classput_box}{putBox}} pb(x0,x1,y0,y1,z0,z1, r, g, b, a);}
+\DoxyCodeLine{59                     pb.draw(*s);}
+\DoxyCodeLine{60                 \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"cutbox"}) != std::string::npos) \{}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65                     std::istringstream SLinha(linha);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67                     cout << \textcolor{stringliteral}{"Cutbox"} << endl;}
+\DoxyCodeLine{68                     \textcolor{keywordtype}{int} x0, x1, y0, y1, z0, z1;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70                     SLinha >> x0 >> x1 >> y0 >> y1 >> z0 >> z1;}
+\DoxyCodeLine{71                     \mbox{\hyperlink{classcut_box}{cutBox}} cb(x0,x1,y0,y1,z0,z1);}
+\DoxyCodeLine{72                     cb.draw(*s);}
+\DoxyCodeLine{73                 \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"putvoxel"}) != std::string::npos) \{}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78                     std::istringstream SLinha(linha);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80                     cout << \textcolor{stringliteral}{"Putvoxel"} << endl;}
+\DoxyCodeLine{81                     \textcolor{keywordtype}{int} x0, y0, z0, r, g, b;}
+\DoxyCodeLine{82                     \textcolor{keywordtype}{float} a;}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84                     SLinha >> x0 >> y0 >> z0 >> r >> g >> b >> a;}
+\DoxyCodeLine{85                     \mbox{\hyperlink{classput_voxel}{putVoxel}} pv(x0,y0,z0, r, g, b, a);}
+\DoxyCodeLine{86                     pv.draw(*s);}
+\DoxyCodeLine{87                 \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"cutvoxel"}) != std::string::npos) \{}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91                     std::istringstream SLinha(linha);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93                     cout << \textcolor{stringliteral}{"Cutvoxel"} << endl;}
+\DoxyCodeLine{94                     \textcolor{keywordtype}{int} x0, y0, z0, r, g, b;}
+\DoxyCodeLine{95                     \textcolor{keywordtype}{float} a;}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97                     SLinha >> x0 >> y0 >> z0 >> r >> g >> b >> a;}
+\DoxyCodeLine{98                     \mbox{\hyperlink{classput_voxel}{putVoxel}} cv(x0,y0,z0, r, g, b, a);}
+\DoxyCodeLine{99                     cv.draw(*s);}
+\DoxyCodeLine{100                 \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"cutsphere"}) != std::string::npos) \{}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104                     std::istringstream SLinha(linha);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106                     cout << \textcolor{stringliteral}{"Cutsphere"} << endl;}
+\DoxyCodeLine{107                     \textcolor{keywordtype}{int} x0, y0, z0, raio;}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110                     SLinha >> x0 >> y0 >> z0 >> raio;}
+\DoxyCodeLine{111                     \mbox{\hyperlink{classcut_sphere}{cutSphere}} cs(x0, y0, z0, raio);}
+\DoxyCodeLine{112                     cs.draw(*s);}
+\DoxyCodeLine{113                 \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"putsphere"}) != std::string::npos) \{}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117                     std::istringstream Slinha(linha);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119                     cout << \textcolor{stringliteral}{"Putsphere"} << endl;}
+\DoxyCodeLine{120                     \textcolor{keywordtype}{int} x0, y0, z0, raio, r, g, b;}
+\DoxyCodeLine{121                     \textcolor{keywordtype}{float} a;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123                     Slinha >> x0 >> y0 >> z0 >> raio >> r >> g >> b >> a;}
+\DoxyCodeLine{124                     \mbox{\hyperlink{classput_sphere}{putSphere}} ps(x0, y0, z0, raio, r, g, b, a);}
+\DoxyCodeLine{125                     ps.draw(*s);}
+\DoxyCodeLine{126                 \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"cutellipsoid"}) != std::string::npos) \{}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131                     std::istringstream linhaEmStream(linha);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133                     cout << \textcolor{stringliteral}{"Cutellipsoid"} << endl;}
+\DoxyCodeLine{134                     \textcolor{keywordtype}{int} x0, y0, z0, rx, ry, rz;}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136                     linhaEmStream >> x0 >> y0 >> z0 >> rx >> ry >> rz;}
+\DoxyCodeLine{137                     \mbox{\hyperlink{classcut_ellipsoid}{cutEllipsoid}} ce(x0, y0, z0, rx, ry, rz);}
+\DoxyCodeLine{138                     ce.draw(*s);}
+\DoxyCodeLine{139                 \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141                 \textcolor{keywordflow}{if} (linha.find(\textcolor{stringliteral}{"cutellipsoid"}) != std::string::npos) \{}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144                     std::istringstream Slinha(linha);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146                     cout << \textcolor{stringliteral}{"Cutellipsoid"} << endl;}
+\DoxyCodeLine{147                     \textcolor{keywordtype}{int} x0, y0, z0, rx, ry, rz, r, g, b;}
+\DoxyCodeLine{148                     \textcolor{keywordtype}{float} a;}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150                     Slinha >> x0 >> y0 >> z0 >> rx >> ry >> rz >> r >> g >> b >> a;}
+\DoxyCodeLine{151                     \mbox{\hyperlink{classput_ellipsoid}{putEllipsoid}} pe(x0, y0, z0, rx, ry, rz, r, g, b, a);}
+\DoxyCodeLine{152                     pe.draw(*s);}
+\DoxyCodeLine{153                 \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155             \}}
+\DoxyCodeLine{156             fin.close();}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159         s-> writeOFF(\textcolor{stringliteral}{"C:/Users/Ricardo Varela/Documents/escultorabstrato"});}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161         cout << \textcolor{stringliteral}{"arquivo foi gerado!"} << endl;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \}}
+
+\end{DoxyCode}

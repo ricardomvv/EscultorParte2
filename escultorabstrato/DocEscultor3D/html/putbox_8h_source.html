@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DocumentaçãoEscultor: Código-Fonte de putbox.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DocumentaçãoEscultor
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">putbox.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="putbox_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PUTBOX_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PUTBOX_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="figurageometrica_8h.html">figurageometrica.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classput_box.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classput_box.html">putBox</a> : <span class="keyword">public</span> <a class="code" href="class_figura_geometrica.html">FiguraGeometrica</a> {</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classput_box.html#a9624a64ff3a3250645fe2fec478e74c9">    7</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classput_box.html#abcfcd0d2c106eb36967671a62ccba7dd">x0</a>,<a class="code" href="classput_box.html#a08a9a72ed84275d1928b5ff46564ac69">x1</a>, <a class="code" href="classput_box.html#afdc1185312c60fc09bc47b546d81dac2">y0</a>,<a class="code" href="classput_box.html#aaf76b850809e592b8657067f08d76992">y1</a>, <a class="code" href="classput_box.html#ab6855c25ac8539a3473f01574ce6ecd9">z0</a>,<a class="code" href="classput_box.html#a9624a64ff3a3250645fe2fec478e74c9">z1</a>;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classput_box.html#a0baca80ed19dfa4dd1c6e8627ad789e6">    8</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classput_box.html#a0baca80ed19dfa4dd1c6e8627ad789e6">r</a>,<a class="code" href="classput_box.html#a4822603beb1b334019741bf3f6089c15">g</a>,<a class="code" href="classput_box.html#aa0df4260b6c90280256a3717ffff72ff">b</a>,<a class="code" href="classput_box.html#aa16f1f7eeba4af791a9637033c9e7041">a</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classput_box.html#a0681d6bc86d73945045d3bc8fe31ca9c">putBox</a>(<span class="keywordtype">int</span> _x0, <span class="keywordtype">int</span> _x1, <span class="keywordtype">int</span> _y0, <span class="keywordtype">int</span> _y1, <span class="keywordtype">int</span> _z0, <span class="keywordtype">int</span> _z1, <span class="keywordtype">int</span> _r, <span class="keywordtype">int</span> _g, <span class="keywordtype">int</span> _b, <span class="keywordtype">int</span> _a);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classput_box.html#ae472342f54d086fd05be3d1e321e1ec7">draw</a>(<a class="code" href="classsculptor.html">sculptor</a> &amp;t);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classput_box.html#aa8bddb88c536421ee9ee7aec7e73a060">~putBox</a>();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // PUTBOX_H</span></div><div class="ttc" id="classput_box_html_aa8bddb88c536421ee9ee7aec7e73a060"><div class="ttname"><a href="classput_box.html#aa8bddb88c536421ee9ee7aec7e73a060">putBox::~putBox</a></div><div class="ttdeci">~putBox()</div><div class="ttdef"><b>Definition:</b> putbox.cpp:19</div></div>
+<div class="ttc" id="class_figura_geometrica_html"><div class="ttname"><a href="class_figura_geometrica.html">FiguraGeometrica</a></div><div class="ttdef"><b>Definition:</b> figurageometrica.h:6</div></div>
+<div class="ttc" id="classput_box_html_aa16f1f7eeba4af791a9637033c9e7041"><div class="ttname"><a href="classput_box.html#aa16f1f7eeba4af791a9637033c9e7041">putBox::a</a></div><div class="ttdeci">int a</div><div class="ttdef"><b>Definition:</b> putbox.h:8</div></div>
+<div class="ttc" id="classput_box_html_a9624a64ff3a3250645fe2fec478e74c9"><div class="ttname"><a href="classput_box.html#a9624a64ff3a3250645fe2fec478e74c9">putBox::z1</a></div><div class="ttdeci">int z1</div><div class="ttdef"><b>Definition:</b> putbox.h:7</div></div>
+<div class="ttc" id="classsculptor_html"><div class="ttname"><a href="classsculptor.html">sculptor</a></div><div class="ttdoc">The sculptor class tem como objetivo reunir as caracteristicas que definem as unidades que compõe o d...</div><div class="ttdef"><b>Definition:</b> sculptor.h:10</div></div>
+<div class="ttc" id="classput_box_html_a0681d6bc86d73945045d3bc8fe31ca9c"><div class="ttname"><a href="classput_box.html#a0681d6bc86d73945045d3bc8fe31ca9c">putBox::putBox</a></div><div class="ttdeci">putBox(int _x0, int _x1, int _y0, int _y1, int _z0, int _z1, int _r, int _g, int _b, int _a)</div><div class="ttdef"><b>Definition:</b> putbox.cpp:3</div></div>
+<div class="ttc" id="classput_box_html_aaf76b850809e592b8657067f08d76992"><div class="ttname"><a href="classput_box.html#aaf76b850809e592b8657067f08d76992">putBox::y1</a></div><div class="ttdeci">int y1</div><div class="ttdef"><b>Definition:</b> putbox.h:7</div></div>
+<div class="ttc" id="classput_box_html_aa0df4260b6c90280256a3717ffff72ff"><div class="ttname"><a href="classput_box.html#aa0df4260b6c90280256a3717ffff72ff">putBox::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> putbox.h:8</div></div>
+<div class="ttc" id="classput_box_html_abcfcd0d2c106eb36967671a62ccba7dd"><div class="ttname"><a href="classput_box.html#abcfcd0d2c106eb36967671a62ccba7dd">putBox::x0</a></div><div class="ttdeci">int x0</div><div class="ttdef"><b>Definition:</b> putbox.h:7</div></div>
+<div class="ttc" id="classput_box_html_a4822603beb1b334019741bf3f6089c15"><div class="ttname"><a href="classput_box.html#a4822603beb1b334019741bf3f6089c15">putBox::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> putbox.h:8</div></div>
+<div class="ttc" id="figurageometrica_8h_html"><div class="ttname"><a href="figurageometrica_8h.html">figurageometrica.h</a></div></div>
+<div class="ttc" id="classput_box_html_a0baca80ed19dfa4dd1c6e8627ad789e6"><div class="ttname"><a href="classput_box.html#a0baca80ed19dfa4dd1c6e8627ad789e6">putBox::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> putbox.h:8</div></div>
+<div class="ttc" id="classput_box_html_afdc1185312c60fc09bc47b546d81dac2"><div class="ttname"><a href="classput_box.html#afdc1185312c60fc09bc47b546d81dac2">putBox::y0</a></div><div class="ttdeci">int y0</div><div class="ttdef"><b>Definition:</b> putbox.h:7</div></div>
+<div class="ttc" id="classput_box_html"><div class="ttname"><a href="classput_box.html">putBox</a></div><div class="ttdef"><b>Definition:</b> putbox.h:5</div></div>
+<div class="ttc" id="classput_box_html_ae472342f54d086fd05be3d1e321e1ec7"><div class="ttname"><a href="classput_box.html#ae472342f54d086fd05be3d1e321e1ec7">putBox::draw</a></div><div class="ttdeci">void draw(sculptor &amp;t)</div><div class="ttdef"><b>Definition:</b> putbox.cpp:25</div></div>
+<div class="ttc" id="classput_box_html_a08a9a72ed84275d1928b5ff46564ac69"><div class="ttname"><a href="classput_box.html#a08a9a72ed84275d1928b5ff46564ac69">putBox::x1</a></div><div class="ttdeci">int x1</div><div class="ttdef"><b>Definition:</b> putbox.h:7</div></div>
+<div class="ttc" id="classput_box_html_ab6855c25ac8539a3473f01574ce6ecd9"><div class="ttname"><a href="classput_box.html#ab6855c25ac8539a3473f01574ce6ecd9">putBox::z0</a></div><div class="ttdeci">int z0</div><div class="ttdef"><b>Definition:</b> putbox.h:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
